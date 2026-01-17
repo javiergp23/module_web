@@ -7,6 +7,9 @@ const server = createServer((req, res) => {
     }else if(req.url === "/hello"){
         res.writeHead(200, {"Content-Type": "text/plain"});
         res.end("Hello Page");
+    }else{
+        res.writeHead(404, {"Content-Type": "text/plain"}); 
+        res.end("Page Not Found");
     }
 })
 
